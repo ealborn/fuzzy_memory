@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  background: skyblue;
+}
+h1 {
+  color: blue;
+}
+.wrap {
+  width: 100vw;
+  height: 100vh;
+}
+
+.card {
+  width: 20vw;
+  height: 20vh;
+  background: blue;
+  border-style: solid;
+  border-color: black;
+  margin: 2%;
+}
