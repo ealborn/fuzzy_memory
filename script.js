@@ -1,6 +1,3 @@
-// const cards = document.querySelector('.card')
-// const button =document.querySelector('button')
-
 const cards = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
 
 const fetchBoard = document.getElementById("memory_board");
@@ -8,9 +5,10 @@ const fetchBoard = document.getElementById("memory_board");
 //calls shuffle function
 shuffle(cards);
 
+//creates and displays each card div
 cards.forEach(function(card) {
   const newElement = document.createElement('div');
-  newElement.classList.add('kort');
+  newElement.classList.add('cardClass');
   newElement.dataset.letter = card;
   newElement.textContent = card;
   fetchBoard.appendChild(newElement);
@@ -28,7 +26,7 @@ function shuffle(cards) {
   }
 
 //this is now an array with all the cards.
-  const pickOne = document.querySelectorAll('.kort');
+  const pickOne = document.querySelectorAll('.cardClass');
   let pairing = [];
 
   pickOne.forEach(function(card) {
