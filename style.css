@@ -7,15 +7,15 @@ display: flex;
 justify-content: center;
 }
 
-.header {
+header {
   width: 100%;
-  background: navy;
+  background: skyblue;
   display: flex;
   justify-content: center
 
 }
 h1 {
-  color: black;
+  color: navy;
   display: flex;
   text-align: center;
   justify-content: center
@@ -23,7 +23,7 @@ h1 {
   font-size: 8vh;
 }
 
-.pagewrap {
+/*.pagewrap {
   background-color: white;
   width: 80vw;
   height: 100vh;
@@ -32,16 +32,36 @@ h1 {
   flex-direction: column;
   align-items: center;
   flex-flow: row wrap;
-}
+}*/
 
-.card {
-  width: 15vw;
-  height: 30vh;
-  background: blue;
-  margin: 2%;
-}
-button {
+
+/*button {
   display: flex;
   width: 25%;
   justify-content: center;
+}*/
+
+div#memory_board {
+ background: darkgrey;
+ border:#999 1px solid;
+ width: 800px;
+ height: 540px;
+ padding: 24px;
+ margin: 0px auto;
+}
+
+footer {
+  width: 100%;
+  background: lightgreen;
+  display: flex;
+  justify-content: center;
+}
+
+.kort {
+  border: 1px solid black;
+     margin-bottom: 10px;
+  background: red;
+  color: blue;
+  width: 71px;
+  height: 71px;
 }
