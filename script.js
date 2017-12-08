@@ -26,3 +26,26 @@ function shuffle(cards) {
         cards[j] = x;
     }
   }
+
+//this is now an array with all the cards.
+  const pickOne = document.querySelectorAll('.kort');
+  let pairing = [];
+
+  pickOne.forEach(function(card) {
+      card.addEventListener('click', function(event) {
+      card.classList.add('flipped');
+
+      //comparison
+      pairing.push(card.dataset.letter);
+        if (pairing.length===2) {
+          if (pairing[0]===pairing[1]) {
+            pairing = [];
+          console.log('matching');
+        } else {
+          console.log('not matching');
+          pairing = [];
+          }
+        }
+    });
+
+  });

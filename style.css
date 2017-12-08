@@ -67,3 +67,7 @@ footer {
   width: 71px;
   height: 71px;
 }
+
+.flipped {
+  background: green;
+}
