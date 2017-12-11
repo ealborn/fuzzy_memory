@@ -17,7 +17,7 @@ header {
 }
 
 h1 {
-  color: navy;
+  color: black;
   display: flex;
   text-align: center;
   justify-content: center
@@ -59,7 +59,7 @@ div#memory_board {
 footer {
   width: 100vw;
   height: 5vh;
-  background: lightgreen;
+  background: skyblue;
   display: flex;
   justify-content: center;
 }
