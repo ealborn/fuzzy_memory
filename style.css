@@ -2,18 +2,20 @@
   box-sizing: border-box;
   margin: 0;
 }
+
 html {
 display: flex;
 justify-content: center;
 }
 
 header {
-  width: 100%;
+  width: 100vw;
+  height: 10vh;
   background: skyblue;
   display: flex;
   justify-content: center
-
 }
+
 h1 {
   color: navy;
   display: flex;
@@ -46,28 +48,33 @@ div#memory_board {
  flex-wrap: wrap;
  background: darkgrey;
  border:#999 1px solid;
- width: 800px;
- height: 540px;
- padding: 24px;
+ width: 100vw;
+ height: 85vh;
+ /*padding: 10%;*/
  margin: 0px auto;
 }
 
 footer {
-  width: 100%;
+  width: 100vw;
+  height: 5vh;
   background: lightgreen;
   display: flex;
   justify-content: center;
 }
 
 .cardClass {
-  border: 1px solid black;
-  margin: 10px;
-  background: red;
-  color: blue;
-  width: 71px;
-  height: 71px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*border: 1px solid black;*/
+  margin: 2.5%;
+  background: navy;
+  color: navy;
+  width: 20%;
+  height: 17.5%;
 }
 
 .flipped {
-  background: green;
+  background: skyblue;
+  color: navy;
 }
