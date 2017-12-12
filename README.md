@@ -2,7 +2,7 @@
 
 #### A memory assignment in Javascript, HTML and CSS.
 
-<img src="https://media.giphy.com/media/xTiTnfZjpo4ERiDeTK/giphy.gif"alt="bad memory gif" width="80%">
+<img src="https://media.giphy.com/media/xTiTnfZjpo4ERiDeTK/giphy.gif" alt="bad memory gif" width="80%">
 
 ## Get Started
 
