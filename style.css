@@ -11,17 +11,17 @@ justify-content: center;
 header {
   width: 100vw;
   height: 10vh;
-  background: skyblue;
+  background: #84b4b0;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 h1 {
   color: black;
   display: flex;
   text-align: center;
-  justify-content: center
-  width: 100%;
+  justify-content: center;
+  font-family: 'Handlee', cursive;
   font-size: 8vh;
 }
 
@@ -46,7 +46,7 @@ h1 {
 div#memory_board {
  display: flex;
  flex-wrap: wrap;
- background: darkgrey;
+ background: darkseagreen;
  border:#999 1px solid;
  width: 100vw;
  height: 85vh;
@@ -59,7 +59,7 @@ div#memory_board {
 footer {
   width: 100vw;
   height: 5vh;
-  background: skyblue;
+  background: #84b4b0;
   display: flex;
   justify-content: center;
 }
@@ -72,9 +72,11 @@ footer {
   margin: 2.5%;
   background: white;
   color: black;
+  font-family: 'Spectral SC', serif;
   font-size: 48px;
   width: 20%;
   height: 17.5%;
+  border-radius: 15px;
 }
 
 .flipped {
