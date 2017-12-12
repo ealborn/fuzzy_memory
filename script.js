@@ -2,7 +2,7 @@
 
 const cards = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
 
-const fetchBoard = document.getElementById("memory_board");
+const fetchBoard = document.getElementById('memory_board');
 
 function resetAll() {
 fetchBoard.innerHTML="";
