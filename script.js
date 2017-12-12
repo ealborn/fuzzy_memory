@@ -1,8 +1,11 @@
+'use strict'
+
 const cards = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
 
 const fetchBoard = document.getElementById("memory_board");
 
 function resetAll() {
+fetchBoard.innerHTML="";
   //calls shuffle function
   shuffle(cards);
 
@@ -26,12 +29,14 @@ function resetAll() {
       }
     }
 }
-//resetAll();
+resetAll();
 
 // skapa funktion som gör memoryboard = null
 //skapa sedan en funktion av hela div-loopen som inkluderar shuffle. Då börjar den tom.
 
-// //calls shuffle function
+//kopia av det som bakats in i ovanför funktion resetAll:
+
+//calls shuffle function
 // shuffle(cards);
 //
 // //creates and displays each card div
@@ -68,9 +73,16 @@ function resetAll() {
           if (pairing[0]===pairing[1]) {
             pairing = [];
           console.log('matching');
+
         } else {
           console.log('not matching');
-          pairing = [];
+          pairing.forEach(function(oneCard){
+          const openCard = document.querySelector('[data-letter='+oneCard+']')
+          //console.log(openCard);
+          openCard.style.backgroundColor='red';
+          });
+pairing.length=0;
+console.log('emptied');
           }
         }
     });
