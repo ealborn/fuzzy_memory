@@ -70,13 +70,14 @@ footer {
   justify-content: center;
   /*border: 1px solid black;*/
   margin: 2.5%;
-  background: navy;
-  color: navy;
+  background: white;
+  color: black;
+  font-size: 48px;
   width: 20%;
   height: 17.5%;
 }
 
 .flipped {
-  background: skyblue;
-  color: navy;
+  background: red;
+  color: white;
 }
