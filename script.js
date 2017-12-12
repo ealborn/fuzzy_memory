@@ -81,14 +81,16 @@ resetAll();
           //console.log(openCard);
           openCard.style.backgroundColor='red';
           });
-pairing.length=0;
-console.log('emptied');
+
+      pairing.length=0;
+      console.log('emptied');
           }
         }
     });
 
   });
 
+//click to reset board
 const restart = document.querySelector('button');
 restart.addEventListener('click', function(event) {
   resetAll();
