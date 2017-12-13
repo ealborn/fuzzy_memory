@@ -4,8 +4,31 @@ const cards = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
 
 const fetchBoard = document.getElementById('memory_board');
 
+function onClick(event) {
+  console.log(event);
+  event.target.classList.add('flipped');
+
+  //comparison
+  pairing.push(event.target);
+  if (pairing.length===2) {
+    if (pairing[0].dataset.letter===pairing[1].dataset.letter) {
+      pairing = [];
+      console.log('matching');
+
+    } else {
+      console.log('not matching');
+      pairing.forEach(function(oneCard){
+        oneCard.classList.remove('flipped');
+      });
+
+      pairing=[];
+      console.log('emptied');
+    }
+  }
+}
+
 function resetAll() {
-fetchBoard.innerHTML="";
+  fetchBoard.innerHTML="";
   //calls shuffle function
   shuffle(cards);
 
@@ -15,80 +38,34 @@ fetchBoard.innerHTML="";
     newElement.classList.add('cardClass');
     newElement.dataset.letter = card;
     newElement.textContent = card;
+    newElement.addEventListener('click', onClick);
     fetchBoard.appendChild(newElement);
+
   })
 
   //shuffle function
   function shuffle(cards) {
-      let j, x, i;
-      for (i = cards.length - 1; i > 0; i--) {
-          j = Math.floor(Math.random() * (i + 1));
-          x = cards[i];
-          cards[i] = cards[j];
-          cards[j] = x;
-      }
+    let j, x, i;
+    for (i = cards.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = cards[i];
+      cards[i] = cards[j];
+      cards[j] = x;
     }
+  }
 }
 resetAll();
 
-// skapa funktion som gör memoryboard = null
-//skapa sedan en funktion av hela div-loopen som inkluderar shuffle. Då börjar den tom.
-
-//kopia av det som bakats in i ovanför funktion resetAll:
-
-//calls shuffle function
-// shuffle(cards);
-//
-// //creates and displays each card div
-// cards.forEach(function(card) {
-//   const newElement = document.createElement('div');
-//   newElement.classList.add('cardClass');
-//   newElement.dataset.letter = card;
-//   newElement.textContent = card;
-//   fetchBoard.appendChild(newElement);
-// })
-//
-// //shuffle function
-// function shuffle(cards) {
-//     let j, x, i;
-//     for (i = cards.length - 1; i > 0; i--) {
-//         j = Math.floor(Math.random() * (i + 1));
-//         x = cards[i];
-//         cards[i] = cards[j];
-//         cards[j] = x;
-//     }
-//   }
-
 //this is now an array with all the cards.
-  const pickOne = document.querySelectorAll('.cardClass');
-  let pairing = [];
+const pickOne = document.querySelectorAll('.cardClass');
+let pairing = [];
 
-  pickOne.forEach(function(card) {
-      card.addEventListener('click', function(event) {
-      card.classList.add('flipped');
+pickOne.forEach(function(card) {
+  console.log(typeof(pickOne));
+  //console.log(card);
+  card.addEventListener('click', onClick);
 
-      //comparison
-      pairing.push(card.dataset.letter);
-        if (pairing.length===2) {
-          if (pairing[0]===pairing[1]) {
-            pairing = [];
-          console.log('matching');
-
-        } else {
-          console.log('not matching');
-          pairing.forEach(function(oneCard){
-          const openCard = document.querySelector('[data-letter='+oneCard+']')
-          //console.log(openCard);
-          openCard.style.backgroundColor='red';
-          });
-
-      pairing.length=0;
-      console.log('emptied');
-          }
-        }
-    });
-
-  });
+});
 
 //click to reset board
 const restart = document.querySelector('button');
