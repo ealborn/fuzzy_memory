@@ -5,36 +5,39 @@ const cards = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
 const fetchBoard = document.getElementById('memory_board');
 
 function onClick(event) {
-  console.log(event);
+  //console.log(event);
   event.target.classList.add('flipped');
 
-  //comparison
+  //compare two cards and checks if they match
   pairing.push(event.target);
   if (pairing.length===2) {
     if (pairing[0].dataset.letter===pairing[1].dataset.letter) {
       pairing = [];
-      console.log('matching');
+      //console.log('matching');
 
     } else {
-      console.log('not matching');
+      //if the two cards do not match, turn them back over.
+      //console.log('not matching');
       pairing.forEach(function(oneCard){
         setTimeout(function() {
-              oneCard.classList.remove('flipped');
-            }, 800);
+          oneCard.classList.remove('flipped');
+        }, 800);
       });
 
       pairing=[];
-      console.log('emptied');
+      //console.log('emptied');
     }
   }
 }
 
+//resets and reshuffles cards
 function resetAll() {
   fetchBoard.innerHTML="";
   //calls shuffle function
   shuffle(cards);
 
-  //creates and displays each card div
+  //creates and displays each card div, adds a class and dataset to each,
+  //then make them clickable and append them to the div memory_board.
   cards.forEach(function(card) {
     const newElement = document.createElement('div');
     newElement.classList.add('cardClass');
@@ -42,7 +45,6 @@ function resetAll() {
     newElement.textContent = card;
     newElement.addEventListener('click', onClick);
     fetchBoard.appendChild(newElement);
-
   })
 
   //shuffle function
@@ -62,9 +64,8 @@ resetAll();
 const pickOne = document.querySelectorAll('.cardClass');
 let pairing = [];
 
+//loops through all cards and makes them clickable
 pickOne.forEach(function(card) {
-  console.log(typeof(pickOne));
-  //console.log(card);
   card.addEventListener('click', onClick);
 
 });
