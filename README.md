@@ -21,3 +21,5 @@ If you're lazy or just curious, you can click this link to play:
 [Fuzzy memory](https://ealborn.github.io/fuzzy_memory/)
 
 ### Happy playing!
+
+Tested by Maja Persson and Beatrice Svensson.
