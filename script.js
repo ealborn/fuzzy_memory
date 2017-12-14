@@ -18,7 +18,9 @@ function onClick(event) {
     } else {
       console.log('not matching');
       pairing.forEach(function(oneCard){
-        oneCard.classList.remove('flipped');
+        setTimeout(function() {
+              oneCard.classList.remove('flipped');
+            }, 700);
       });
 
       pairing=[];
