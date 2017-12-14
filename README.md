@@ -17,7 +17,7 @@ Find the downloaded folder in your selected location and open the file named ind
 
 ##Cheat link
 
-If you're of the lazy or just curious kind, you can click this link below to play too:
+If you're of the lazy or just curious kind, you can click this link to play:
 [Fuzzy memory](https://ealborn.github.io/fuzzy_memory/)
 
 Happy playing!
