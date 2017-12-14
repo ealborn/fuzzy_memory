@@ -124,3 +124,9 @@ button {
   color: white;
   pointer-events: none; /* prevents double clicks */
 }
+
+button {
+  border-radius: 10%;
+  font-size: 3vh;
+  font-family: 'Handlee', cursive;
+}
