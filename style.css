@@ -64,8 +64,6 @@ footer {
   -moz-user-select: none;     /* Firefox all */
 }
 
-
-
 button {
   border-radius: 10%;
   font-size: 3vh;
@@ -124,4 +122,5 @@ button {
 .flipped {
   background: #72113f;
   color: white;
+  pointer-events: none; /* prevents double clicks */
 }
