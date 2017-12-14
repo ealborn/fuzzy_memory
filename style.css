@@ -112,16 +112,16 @@ button {
 
   footer {
     width: 75vw;
-    height: 7vh;
+    height: 6vh;
     background: #4a506b;
     display: flex;
     justify-content: center;
   }
 
 }
+
 .flipped {
   background: #72113f;
   color: white;
   pointer-events: none; /* prevents double clicks */
   }
-}
