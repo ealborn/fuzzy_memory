@@ -67,7 +67,6 @@ let pairing = [];
 //loops through all cards and makes them clickable
 pickOne.forEach(function(card) {
   card.addEventListener('click', onClick);
-
 });
 
 //click to reset board
