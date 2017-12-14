@@ -15,4 +15,9 @@ This is what you need to open this project:
 Clone or download the repository by method of your choice.
 Find the downloaded folder in your selected location and open the file named index.html in your browser.
 
+##Cheat link
+
+If you're of the lazy or just curious kind, you can click this link below to play too:
+[Fuzzy memory](https://ealborn.github.io/fuzzy_memory/)
+
 Happy playing!
