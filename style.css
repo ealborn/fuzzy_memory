@@ -4,13 +4,13 @@
 }
 
 html {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 header {
   width: 100vw;
-  height: 10vh;
+  height: 9vh;
   background: white;
   display: flex;
   justify-content: center;
@@ -22,26 +22,26 @@ h1 {
   text-align: center;
   justify-content: center;
   font-family: 'Handlee', cursive;
-  font-size: 8vh;
+  font-size: 7vh;
 }
 
 div#memory_board {
- display: flex;
- flex-wrap: wrap;
- background: skyblue;
- border:#999 1px solid;
- width: 100vw;
- height: 85vh;
- /*padding: 10%;*/
- margin: 0px auto;
- background-image: url("photo.jpg");
- background-size: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: lavender;
+  width: 100vw;
+  height: 85vh;
+  /*padding: 10%;*/
+  margin: 0px auto;
+  background-image: url("photo.jpg");
+  background-size: auto 100vh;
+  background-position: center;
 }
 
 footer {
   width: 100vw;
-  height: 5vh;
-  background: #59345a;
+  height: 6vh;
+  background: #4a506b;
   display: flex;
   justify-content: center;
 }
@@ -50,7 +50,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*border: 1px solid black;*/
+  /* border: 1px solid black; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 2.5%;
   background: white;
   color: white;
@@ -64,9 +65,61 @@ footer {
 }
 
 .flipped {
-  background: red;
+  background: #72113f;
   color: white;
 }
+
 button {
-  border-radius: 50%;
+  border-radius: 10%;
+  font-size: 3vh;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    width: 75vw;
+    height: 9vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+  }
+
+  div#memory_board {
+    display: flex;
+    flex-wrap: wrap;
+    background: lavender;
+    width: 75vw;
+    height: 85vh;
+    /*padding: 10%;*/
+    margin: 0px;
+    background-image: url("photo.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .cardClass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2.5%;
+    background: white;
+    color: white;
+    font-family: 'Spectral SC', serif;
+    font-size: 48px;
+    width: 20%;
+    height: 17.5%;
+    border-radius: 15px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+  }
+
+  footer {
+    width: 75vw;
+    height: 6vh;
+    background: #4a506b;
+    display: flex;
+    justify-content: center;
+  }
+
 }
