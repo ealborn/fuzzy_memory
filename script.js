@@ -20,7 +20,7 @@ function onClick(event) {
       pairing.forEach(function(oneCard){
         setTimeout(function() {
               oneCard.classList.remove('flipped');
-            }, 700);
+            }, 800);
       });
 
       pairing=[];
